@@ -1,0 +1,19 @@
+th, td {
+  border: 1px solid gray;
+  padding: 8px;
+  text-align: center;
+  min-width: 100px;
+}
+
+th {
+  background-color: darkslategray;
+  color: white;
+}
+
+tr:nth-child(even){
+  background-color: lightgray;
+}
+
+a {
+  color: blue;
+}

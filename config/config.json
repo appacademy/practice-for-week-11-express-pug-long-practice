@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "express_pug_app",
+    "password":  "cb499ea9f8b291a53936",
+    "database": "express_pug_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  },
+  "test": {
+    "username": "express_pug_app",
+    "password":  "cb499ea9f8b291a53936",
+    "database": "express_pug_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  },
+  "production": {
+    "username": "express_pug_app",
+    "password":  "cb499ea9f8b291a53936",
+    "database": "express_pug_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  }
+}
