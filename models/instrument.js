@@ -16,7 +16,9 @@ module.exports = (sequelize, DataTypes) => {
         'other'
       ),
       allowNull: false,
-    }
+    },
+    // For your convenience in the Challenge Phase:
+    numMusicians: DataTypes.VIRTUAL
   }, {});
   Instrument.associate = function(models) {
     // associations can be defined here
@@ -24,6 +26,18 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'instrumentId'
     });
     Instrument.belongsToMany(models.Musician, {
+      through: models.MusicianInstrument,
+      foreignKey: 'instrumentId',
+      otherKey: 'musicianId',
+    });
+
+    // Optional to use in the Challenge Phase:
+    Instrument.hasMany(models.MusicianInstrument, {
+      as: 'AggregateMusicianInstruments',
+      foreignKey: 'instrumentId'
+    });
+    Instrument.belongsToMany(models.Musician, {
+      as: 'AggregateMusicians',
       through: models.MusicianInstrument,
       foreignKey: 'instrumentId',
       otherKey: 'musicianId',
